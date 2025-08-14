@@ -1,6 +1,4 @@
 
----
-
 # Netdata as Monitor
 
 This project demonstrates how to quickly set up **Netdata** for real-time system monitoring using Docker.
