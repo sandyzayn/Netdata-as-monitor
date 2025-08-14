@@ -1,0 +1,28 @@
+# Netdata Docker Run Steps
+
+## 1. Run Netdata container
+
+```
+docker run -d --name=netdata -p 19999:19999 --cap-add SYS_PTRACE --security-opt apparmor=unconfined \
+  -v netdataconfig:/etc/netc/passwd:ro \
+  -v /etc/group:/host/etc/group:ro \
+  -v /proc:/host/proc:ro \
+  -v /sys:/host/sys:ro \
+  -v /etc/os-release:/host/etc/os-release:ro \
+  netdata/netdata
+```
+
+- This command pulls the latest Netdata image and runs it as a container named `netdata`.
+- It maps port 19999 and mounts necessary volumes for monitoring.
+
+## 2. Check running containers
+
+```
+docker ps
+```
+
+- This command lists all running containers. You should see the Netdata container listed.
+
+---
+
+You can copy and paste these commands into your terminal to set up Netdata quickly.
