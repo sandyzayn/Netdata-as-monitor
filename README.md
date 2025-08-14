@@ -1,17 +1,21 @@
-# Netdata as Monitor
+# 🚦 **Netdata as Monitor** 🚦
 
-This project demonstrates how to quickly set up Netdata for system monitoring using Docker.
+This project demonstrates how to **quickly set up Netdata for system monitoring** using Docker. 🐳✨
 
-## Prerequisites
-- Docker installed on your system
-- Basic knowledge of command line usage
+---
 
-## Steps to Run Netdata
+## 🛠️ **Prerequisites**
+- 🐋 **Docker** installed on your system
+- 💻 **Basic knowledge of command line** usage
 
-1. **Run the Netdata container:**
-   
+---
+
+## 🚀 **Steps to Run Netdata**
+
+1. **Run the Netdata container:** 🚢
+
    Open a terminal and execute:
-   
+
    ```sh
    docker run -d --name=netdata -p 19999:19999 --cap-add SYS_PTRACE --security-opt apparmor=unconfined \
      -v netdataconfig:/etc/netc/passwd:ro \
@@ -21,33 +25,37 @@ This project demonstrates how to quickly set up Netdata for system monitoring us
      -v /etc/os-release:/host/etc/os-release:ro \
      netdata/netdata
    ```
-   
-   This command will pull the latest Netdata image and start the container with the required settings.
+   _This command will pull the latest Netdata image and start the container with the required settings._
 
-2. **Verify the container is running:**
-   
+2. **Verify the container is running:** ✅
+
    ```sh
    docker ps
    ```
-   
-   You should see a container named `netdata` in the list.
+   _You should see a container named `netdata` in the list._
 
-3. **Access the Netdata dashboard:**
-   
-   Open your browser and go to: [http://localhost:19999](http://localhost:19999)
+3. **Access the Netdata dashboard:** 🌐
 
-## Files
-- `run_netdata_docker_steps.txt`: Contains the Docker commands and explanations for quick reference.
-
-## Notes
-- Make sure the required ports and volumes are available and not used by other services.
-- For more information, visit the [Netdata documentation](https://learn.netdata.cloud/docs/agent/packaging/docker/).
+   Open your browser and go to: **[http://localhost:19999](http://localhost:19999)**
 
 ---
 
-Feel free to modify the steps as per your environment or requirements.
+## 📄 **Files**
+- `run_netdata_docker_steps.txt`: Contains the Docker commands and explanations for quick reference.
 
-## Example Screenshots
+---
+
+## 📝 **Notes**
+- ⚠️ **Make sure the required ports and volumes are available** and not used by other services.
+- 📚 For more information, visit the [Netdata documentation](https://learn.netdata.cloud/docs/agent/packaging/docker/).
+
+---
+
+> _Feel free to modify the steps as per your environment or requirements._ ✏️
+
+---
+
+## 🖼️ **Example Screenshots**
 
 <img width="1919" height="1018" alt="Image" src="https://github.com/user-attachments/assets/9543f9f5-475b-4c12-b170-11f31a4b52e1" />
 
@@ -58,3 +66,7 @@ Feel free to modify the steps as per your environment or requirements.
 <img width="1919" height="1017" alt="Image" src="https://github.com/user-attachments/assets/3460d595-9501-41eb-875c-f6d0a1148eb1" />
 
 <img width="1919" height="1018" alt="Image" src="https://github.com/user-attachments/assets/e412a4ce-4d29-4573-910a-9c198c014559" />
+
+---
+
+## 🎉 **Happy Monitoring!** 🎉
