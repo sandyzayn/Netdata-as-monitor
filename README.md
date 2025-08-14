@@ -8,7 +8,6 @@ Netdata provides a comprehensive and interactive dashboard for tracking CPU, mem
 
 ---
 
----
 
 ## 💡 Introduction
 
